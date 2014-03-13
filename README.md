@@ -1,5 +1,6 @@
 RepositoryServiceBundle
 =======================
+[![Build Status](https://travis-ci.org/hautelook/RepositoryServiceBundle.png)](https://travis-ci.org/hautelook/RepositoryServiceBundle)
 
 A Symfony2 Bundle that will automatically create services for all of your entity repositories.
 
