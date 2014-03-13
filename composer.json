@@ -1,0 +1,24 @@
+{
+    "name": "hautelook/repository-service-bundle",
+    "description": "A Symfony2 Bundle that will automatically create services for all of your entity repositories.",
+    "require": {
+        "symfony/framework-bundle": "~2.3",
+        "symfony/finder": "~2.3",
+        "doctrine/orm": ">=2.2.3,<2.4-dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brandon Woodmansee",
+            "email": "woodmansee@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "~3.7"
+    },
+    "autoload": {
+        "psr-0": { "Hautelook\\RepositoryServiceBundle": "" }
+    },
+    "target-dir": "Hautelook/RepositoryServiceBundle"
+}
