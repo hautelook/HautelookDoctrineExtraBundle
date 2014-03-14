@@ -21,8 +21,8 @@ class RepositoryServiceCompilerPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        $entityLocation = $container->getParameter('hautelook_repository_service.entity.location');
-        $entityRepositoryLocation = $container->getParameter('hautelook_repository_service.entity.repository_location');
+        $entityLocation = $container->getParameter('hautelook_doctrine_extra.entity.location');
+        $entityRepositoryLocation = $container->getParameter('hautelook_doctrine_extra.entity.repository_location');
         $repositoryClasses = $this->getRepositoryClasses($entityRepositoryLocation);
         foreach ($repositoryClasses as $repository) {
             $this->createCustomRepositoryDefinition($container, $repository);
@@ -49,9 +49,9 @@ class RepositoryServiceCompilerPass implements CompilerPassInterface
         $classNamespace = sprintf(
             '%s\%s',
             $this->getEntityRepositoryNamespace(
-                $container->getParameter('hautelook_repository_service.entity.location'),
-                $container->getParameter('hautelook_repository_service.entity.repository_location'),
-                $container->getParameter('hautelook_repository_service.entity.namespace')
+                $container->getParameter('hautelook_doctrine_extra.entity.location'),
+                $container->getParameter('hautelook_doctrine_extra.entity.repository_location'),
+                $container->getParameter('hautelook_doctrine_extra.entity.namespace')
             ),
             $className
         );
@@ -93,7 +93,7 @@ class RepositoryServiceCompilerPass implements CompilerPassInterface
     private function createDefinition(ContainerBuilder $container, $class, $entityName)
     {
         $serviceId = $this->getServiceId(
-            $container->getParameter('hautelook_repository_service.entity.service_prefix'),
+            $container->getParameter('hautelook_doctrine_extra.entity.service_prefix'),
             $entityName
         );
         // Definition exists for this service id, do nothing
@@ -105,7 +105,7 @@ class RepositoryServiceCompilerPass implements CompilerPassInterface
         $definition->setFactoryService('doctrine');
         $definition->setClass($class);
         $definition->setFactoryMethod('getRepository');
-        $entityNamespace = $container->getParameter('hautelook_repository_service.entity.namespace');
+        $entityNamespace = $container->getParameter('hautelook_doctrine_extra.entity.namespace');
         $definition->addArgument(sprintf('%s\%s', $entityNamespace, $entityName));
     }
 
