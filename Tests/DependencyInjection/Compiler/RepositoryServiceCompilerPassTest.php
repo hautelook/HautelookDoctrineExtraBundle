@@ -11,10 +11,10 @@ class RepositoryServiceCompilerTest extends \PHPUnit_Framework_TestCase
     {
         $namespace = 'Hautelook\DoctrineExtraBundle\Resources\fixture\Entity';
         $container = new ContainerBuilder();
-        $container->setParameter('hautelook_repository_service.entity.location', __DIR__  . '/../../../Resources/fixtures/Entity');
-        $container->setParameter('hautelook_repository_service.entity.repository_location', __DIR__ . '/../../../Resources/fixtures/Entity');
-        $container->setParameter('hautelook_repository_service.entity.service_prefix', 'hautelook_test.entity');
-        $container->setParameter('hautelook_repository_service.entity.namespace', $namespace);
+        $container->setParameter('hautelook_doctrine_extra.entity.location', __DIR__  . '/../../../Resources/fixtures/Entity');
+        $container->setParameter('hautelook_doctrine_extra.entity.repository_location', __DIR__ . '/../../../Resources/fixtures/Entity');
+        $container->setParameter('hautelook_doctrine_extra.entity.service_prefix', 'hautelook_test.entity');
+        $container->setParameter('hautelook_doctrine_extra.entity.namespace', $namespace);
 
         $pass = new RepositoryServiceCompilerPass();
         $pass->process($container);
@@ -33,10 +33,10 @@ class RepositoryServiceCompilerTest extends \PHPUnit_Framework_TestCase
     public function testProcessBadLocation()
     {
         $container = new ContainerBuilder();
-        $container->setParameter('hautelook_repository_service.entity.location', __DIR__  . '/Hello');
-        $container->setParameter('hautelook_repository_service.entity.repository_location', __DIR__ . '/../../../Resources/fixtures/Entity');
-        $container->setParameter('hautelook_repository_service.entity.service_prefix', 'hautelook_test.entity');
-        $container->setParameter('hautelook_repository_service.entity.namespace', 'Hautelook\DoctrineExtraBundle\Resources\fixture\Entity');
+        $container->setParameter('hautelook_doctrine_extra.entity.location', __DIR__  . '/Hello');
+        $container->setParameter('hautelook_doctrine_extra.entity.repository_location', __DIR__ . '/../../../Resources/fixtures/Entity');
+        $container->setParameter('hautelook_doctrine_extra.entity.service_prefix', 'hautelook_test.entity');
+        $container->setParameter('hautelook_doctrine_extra.entity.namespace', 'Hautelook\DoctrineExtraBundle\Resources\fixture\Entity');
         $pass = new RepositoryServiceCompilerPass();
         $this->setExpectedException('\RuntimeException');
         $pass->process($container);
@@ -45,10 +45,10 @@ class RepositoryServiceCompilerTest extends \PHPUnit_Framework_TestCase
     public function testProcessBadRepositoryLocation()
     {
         $container = new ContainerBuilder();
-        $container->setParameter('hautelook_repository_service.entity.location',  __DIR__ . '/../../../Resources/fixtures/Entity');
-        $container->setParameter('hautelook_repository_service.entity.repository_location', __DIR__  . '/Hello');
-        $container->setParameter('hautelook_repository_service.entity.service_prefix', 'hautelook_test.entity');
-        $container->setParameter('hautelook_repository_service.entity.namespace', 'Hautelook\DoctrineExtraBundle\Resources\fixture\Entity');
+        $container->setParameter('hautelook_doctrine_extra.entity.location',  __DIR__ . '/../../../Resources/fixtures/Entity');
+        $container->setParameter('hautelook_doctrine_extra.entity.repository_location', __DIR__  . '/Hello');
+        $container->setParameter('hautelook_doctrine_extra.entity.service_prefix', 'hautelook_test.entity');
+        $container->setParameter('hautelook_doctrine_extra.entity.namespace', 'Hautelook\DoctrineExtraBundle\Resources\fixture\Entity');
         $pass = new RepositoryServiceCompilerPass();
         $this->setExpectedException('\RuntimeException');
         $pass->process($container);
