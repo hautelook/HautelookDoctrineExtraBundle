@@ -1,6 +1,6 @@
 <?php
 
-namespace Hautelook\RepositoryServiceBundle\DependencyInjection\Compiler;
+namespace Hautelook\DoctrineExtraBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\Filesystem\Filesystem;
 use Doctrine\Common\Inflector\Inflector;

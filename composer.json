@@ -1,5 +1,5 @@
 {
-    "name": "hautelook/repository-service-bundle",
+    "name": "hautelook/doctrine-extra-bundle",
     "description": "A Symfony2 Bundle that will automatically create services for all of your entity repositories.",
     "require": {
         "symfony/framework-bundle": "~2.3",
@@ -18,7 +18,7 @@
         "phpunit/phpunit": "~3.7"
     },
     "autoload": {
-        "psr-0": { "Hautelook\\RepositoryServiceBundle": "" }
+        "psr-0": { "Hautelook\\DoctrineExtraBundle": "" }
     },
-    "target-dir": "Hautelook/RepositoryServiceBundle"
+    "target-dir": "Hautelook/DoctrineExtraBundle"
 }

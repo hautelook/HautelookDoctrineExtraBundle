@@ -1,12 +1,12 @@
 <?php
 
-namespace Hautelook\RepositoryServiceBundle;
+namespace Hautelook\DoctrineExtraBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Hautelook\RepositoryServiceBundle\DependencyInjection\Compiler\RepositoryServiceCompilerPass;
+use Hautelook\DoctrineExtraBundle\DependencyInjection\Compiler\RepositoryServiceCompilerPass;
 
-class HautelookRepositoryServiceBundle extends Bundle
+class HautelookDoctrineExtraBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

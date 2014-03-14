@@ -15,7 +15,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Hautelook\RepositoryServiceBundle\HautelookRepositoryServiceBundle()
+        new Hautelook\DoctrineExtraBundle\HautelookRepositoryServiceBundle()
         // ...
     );
 }

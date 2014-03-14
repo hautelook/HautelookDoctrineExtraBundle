@@ -1,6 +1,6 @@
 <?php
 
-namespace Hautelook\RepositoryServiceBundle\Resources\fixtures\Entity;
+namespace Hautelook\DoctrineExtraBundle\Resources\fixtures\Entity;
 
 class FooRepository
 {

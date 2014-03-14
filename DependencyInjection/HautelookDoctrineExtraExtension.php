@@ -1,6 +1,6 @@
 <?php
 
-namespace Hautelook\RepositoryServiceBundle\DependencyInjection;
+namespace Hautelook\DoctrineExtraBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class HautelookRepositoryServiceExtension extends Extension
+class HautelookDoctrineExtraExtension extends Extension
 {
     /**
      * {@inheritDoc}

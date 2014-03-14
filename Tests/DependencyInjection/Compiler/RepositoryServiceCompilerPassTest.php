@@ -1,15 +1,15 @@
 <?php
 
-namespace Hautelook\RepositoryServiceBundle\Tests\DependencyInjection\Compiler;
+namespace Hautelook\DoctrineExtraBundle\Tests\DependencyInjection\Compiler;
 
-use Hautelook\RepositoryServiceBundle\DependencyInjection\Compiler\RepositoryServiceCompilerPass;
+use Hautelook\DoctrineExtraBundle\DependencyInjection\Compiler\RepositoryServiceCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class RepositoryServiceCompilerTest extends \PHPUnit_Framework_TestCase
 {
     public function testProcess()
     {
-        $namespace = 'Hautelook\RepositoryServiceBundle\Resources\fixture\Entity';
+        $namespace = 'Hautelook\DoctrineExtraBundle\Resources\fixture\Entity';
         $container = new ContainerBuilder();
         $container->setParameter('hautelook_repository_service.entity.location', __DIR__  . '/../../../Resources/fixtures/Entity');
         $container->setParameter('hautelook_repository_service.entity.repository_location', __DIR__ . '/../../../Resources/fixtures/Entity');
@@ -36,7 +36,7 @@ class RepositoryServiceCompilerTest extends \PHPUnit_Framework_TestCase
         $container->setParameter('hautelook_repository_service.entity.location', __DIR__  . '/Hello');
         $container->setParameter('hautelook_repository_service.entity.repository_location', __DIR__ . '/../../../Resources/fixtures/Entity');
         $container->setParameter('hautelook_repository_service.entity.service_prefix', 'hautelook_test.entity');
-        $container->setParameter('hautelook_repository_service.entity.namespace', 'Hautelook\RepositoryServiceBundle\Resources\fixture\Entity');
+        $container->setParameter('hautelook_repository_service.entity.namespace', 'Hautelook\DoctrineExtraBundle\Resources\fixture\Entity');
         $pass = new RepositoryServiceCompilerPass();
         $this->setExpectedException('\RuntimeException');
         $pass->process($container);
@@ -48,7 +48,7 @@ class RepositoryServiceCompilerTest extends \PHPUnit_Framework_TestCase
         $container->setParameter('hautelook_repository_service.entity.location',  __DIR__ . '/../../../Resources/fixtures/Entity');
         $container->setParameter('hautelook_repository_service.entity.repository_location', __DIR__  . '/Hello');
         $container->setParameter('hautelook_repository_service.entity.service_prefix', 'hautelook_test.entity');
-        $container->setParameter('hautelook_repository_service.entity.namespace', 'Hautelook\RepositoryServiceBundle\Resources\fixture\Entity');
+        $container->setParameter('hautelook_repository_service.entity.namespace', 'Hautelook\DoctrineExtraBundle\Resources\fixture\Entity');
         $pass = new RepositoryServiceCompilerPass();
         $this->setExpectedException('\RuntimeException');
         $pass->process($container);
