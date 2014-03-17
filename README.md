@@ -98,7 +98,7 @@ class UserRepository
 
 You can also control whether or not you want to left join, inner join, or if you want to fetch join or just join:
 
-```
+```php
 /**
  * @param QueryBuilder $qb
  * @param array        $propertyTree
