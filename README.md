@@ -1,6 +1,6 @@
 RepositoryServiceBundle
 =======================
-[![Build Status](https://travis-ci.org/hautelook/RepositoryServiceBundle.png)](https://travis-ci.org/hautelook/RepositoryServiceBundle)
+[![Build Status](https://travis-ci.org/hautelook/HautelookDoctrineExtraBundle.png)](https://travis-ci.org/hautelook/HautelookDoctrineExtraBundle)
 
 Symfony2 bundle that provides convenient additions to doctrine:
 
