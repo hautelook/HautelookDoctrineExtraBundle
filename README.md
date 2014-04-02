@@ -1,4 +1,4 @@
-RepositoryServiceBundle
+HautelookDoctrineExtraBundle
 =======================
 [![Build Status](https://travis-ci.org/hautelook/HautelookDoctrineExtraBundle.png)](https://travis-ci.org/hautelook/HautelookDoctrineExtraBundle)
 
