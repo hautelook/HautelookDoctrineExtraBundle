@@ -4,7 +4,7 @@
     "require": {
         "symfony/framework-bundle": "~2.3",
         "symfony/finder": "~2.3",
-        "doctrine/orm": ">=2.2.3,<2.5-dev"
+        "doctrine/orm": ">=2.2.3,<2.6-dev"
     },
     "license": "MIT",
     "authors": [
