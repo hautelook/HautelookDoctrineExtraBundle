@@ -66,7 +66,7 @@ class UserRepository
                     ],
                     'invoice',
                 ],
-                'groups,
+                'groups',
             ]
         );
 
